@@ -56,6 +56,51 @@
 		box-sizing: border-box;
 	}
 
+	/* Ventana Modal */
+
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+#close-modal {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+	
+
 /* Grid */
 
 	.row {
@@ -1848,9 +1893,9 @@
 			}
 
 		header.major > p {
-			font-size: 0.7em;
+			font-size: 0.6em;
 			font-weight: 600;
-			letter-spacing: 0.25em;
+			letter-spacing: 0.10em;
 			margin-bottom: 0;
 			text-transform: uppercase;
 		}
@@ -2774,7 +2819,7 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: default;
-			height: 40vh;
+			/*height: 40vh;*/
 			max-height: 40em;
 			min-height: 23em;
 			overflow: hidden;
@@ -2885,7 +2930,7 @@
 
 			.tiles article {
 				padding: 4em 3em 2em 3em ;
-				height: 30vh;
+				/*height: 30vh;*/
 				max-height: 30em;
 				min-height: 20em;
 			}
@@ -2904,7 +2949,7 @@
 
 			.tiles article {
 				padding: 3em 1.5em 1em 1.5em ;
-				height: 16em;
+				/*height: 16em;*/
 				max-height: none;
 				min-height: 0;
 			}
@@ -2922,7 +2967,7 @@
 			}
 
 				.tiles article {
-					height: 20em;
+					/*height: 20em;*/
 					width: 100% !important;
 				}
 
@@ -3407,7 +3452,8 @@
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		background-image: url("../../images/banner.jpg");
+		/*background-image: url("../../images/banner.jpg");*/
+		background-image: url("https://camo.githubusercontent.com/9141210ace06c3858dcd22dbb06deefbe8a5f65c973b2248b91a04f8e1081bf9/68747470733a2f2f63662d636f75727365732d646174612e73332e75732e636c6f75642d6f626a6563742d73746f726167652e617070646f6d61696e2e636c6f75642f49424d446576656c6f706572536b696c6c734e6574776f726b2d445330373031454e2d536b696c6c734e6574776f726b2f6170692f496d616765732f6c616e64696e675f312e676966");
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;

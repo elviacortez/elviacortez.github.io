@@ -1,0 +1,444 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ciencia de Datos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Ciencia de Datos</strong> <span> </span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions vertical">
+							<li><a href="#" class="button special fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1>Pasos a seguir</h1>
+							</header>
+							<div class="content">
+								<p>Todos están desarrollados en cuadernos Jupyter alojados en Github<br />
+								donde se explican cada una de las etapas.</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Metodología aplicada</h2>
+									</header>
+									
+									<ul class="links">
+										<li><a href="#uno">Datos recopilados de la API pública de SpaceX</a></li>
+										<li><a href="#dos">Datos recopilados de la página de SpaceX en Wikipedia </a></li>
+										<li><a href="#tres">Realización de la gestión de datos:Clasificación de aterrizajes reales como exitosos y no exitosos</a></li>
+										<li><a href="#cuatro">Análisis exploratorio de datos (EDA) mediante visualización y SQL</a></li>
+										<li><a href="#cinco">Realización de análisis visuales interactivos con Folium y Plotly Dash</a></li>
+										<li><a href="#seis">Realización de análisis predictivos mediante modelos de clasificación: Modelos con GridSearchCV</a></li>
+
+									</ul>
+								</div>
+							</section>
+
+
+
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-spacex-data-collection-apielviacortez.ipynb" class="image">
+										<img src="images/pic01.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major" id="uno">
+												<h3>Recopilación de datos mediante API REST</h3>
+											</header>
+											<p>
+												Se trabajó con los datos de lanzamiento de SpaceX recopilados a través de una API, específicamente la API REST de SpaceX. Esta API proporciona datos sobre los lanzamientos, incluida información sobre el cohete utilizado, la carga útil entregada, las especificaciones del lanzamiento, las especificaciones de aterrizaje y el resultado del aterrizaje. El objetivo es utilizar estos datos para predecir si SpaceX intentará aterrizar un cohete o no. Se realiza una solicitud de obtención utilizando la biblioteca de solicitudes para obtener los datos de lanzamiento, y se utiliza para obtener los datos de la API. Este resultado se puede ver llamando al método .json (). La respuesta tendrá la forma de un JSON, específicamente una lista de objetos JSON. En concreto, se tiene una lista de objetos JSON, cada uno de los cuales representa un lanzamiento. Para convertir este JSON en un marco de datos, se usó la función json_normalize. Esta función permite «normalizar» los datos json estructurados en una tabla plana.
+
+												Columnas de datos obtenidas de la API de Space X:
+												Número de vuelo, fecha, versión del booster, masa de la carga útil, órbita, lugar de lanzamiento, resultado, ights, GridFins,
+												reutilizados, patas, pista de aterrizaje, bloque, recuento de reutilizados, serie, longitud, latitud
+
+											</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-spacex-data-collection-apielviacortez.ipynb" class="button"> Ver Jupyter Notebook</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-webscrapingelviacortez.ipynb" class="image">
+										<img src="images/scraping.png" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3 id="dos">Recopilación de datos mediante web scraping</h3>
+											</header>
+											<p>Otra fuente de datos para obtener datos de lanzamiento de Falcon 9 son las páginas 
+												wiki relacionadas con el web scraping. Se utilizará el paquete BeautifulSoup de Python para recopilar en la web algunas tablas HTML que contienen valiosos registros de lanzamiento de Falcon 9. A continuación, se tendrá que analizar los datos de esas tablas y convertirlos en un marco de datos de Pandas para su posterior visualización y análisis. 
+											</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-webscrapingelviacortez.ipynb" class="button">Ver Jupyter Notebook</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/labs-jupyter-spacex-data_wrangling.ipynb" class="image">
+										<img src="images/disputa.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3 id="tres">Disputa de datos</h3>
+											</header>
+											<p>La intención es transformar los datos sin procesar en un conjunto de datos limpio que 
+												proporcione datos significativos sobre la situación que estamos intentando abordar: ordenar los datos mediante una API,muestrear los datos y tratar los valores nulos. 
+												En algunas columnas, como Rocket, se tenía un número de identificación,	no datos reales, 
+												esto significó que se tuvo que volver a utilizar la API para dirigirse a otro punto final a fin de recopilar datos específicos para cada número de identificación.
+												
+												Con las funciones ya creadas se usaron los siguientes: Booster, Launchpad, payload y core. 
+												Los datos se almacenaron en listas y se utilizaron para crear el conjunto de datos. 
+												Otro problema que hubo es que los datos de lanzamiento que se tenían incluían datos del propulsor Falcon 1, mientras que solo se querías el Falcon 9.
+
+												En esta etapa se analizaron cada uno de los atributos y se transformaron algunos de ellos. Los de lanzamiento, la columna de órbitas, la altitud, la duración de cada una de estas órbitas, el atributo oucomes, que determina si la primera etapa del lanzamiento tuvo éxito o no, fueron analizados. Se puso de manifiesto que hay 8 tipos que indican si el booster aterrizó con éxito o no.
+												Este atributo fue convertido a las clases 0 y 1 y el valor fue retenido en una variable, esencial para la búsqueda. Del mismo modo, se determinaron qué atributos están relacionados con los aterrizajes con éxito y se corvirtieron las variables categóricas, preparando los datos para un modelo de aprendizaje automático.
+												Se creó una etiqueta de entrenamiento con resultados de aterrizaje donde éxito = 1 y fracaso = 0.
+												La columna de resultados tiene dos componentes "Resultado de la misión" "Lugar de aterrizaje"
+												Se añadió una nueva columna de etiqueta de entrenamiento "clase" con un valor de 1 si "Resultado de la misión" es Verdadero y 0 en caso contrario.
+												Clase: Verdadero ASDS, Verdadero RTLS y Verdadero Océano : 1
+												Clase: Ninguno Ninguno, ASDS Falso, ASDS Ninguno, Océano Falso, RTLS Falso: 0
+											</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/labs-jupyter-spacex-data_wrangling.ipynb" class="button">Ver Jupyter Notebook</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-eda-dataviz.ipynb.jupyterliteelviacortez.ipynb" class="image">
+										<img src="images/resuldatavisual.png" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3 id="cuatro">Análisis exploratorio de datos</h3>
+											</header>
+											<p>Para realizar el análisis exploratorio de datos y la ingeniería de características, las bibliotecas Pandas y Matplotlib se utilizaron para ilustrar los siguientes diagramas:
+
+												- Diagramas de dispersión: para representar la relación entre dos variables diferentes y comparar conjuntos de
+												características, como número de vuelo versus sitio de lanzamiento, carga útil versus sitio de lanzamiento, número de vuelo
+												versus tipo de órbita y carga útil versus tipo de órbita.
+
+												- Gráfico de barras: comparación de valores entre varios grupos a la vez, donde el eje x representa una categoría y el eje y representa un valor discreto. Los gráficos de barras se utilizaron
+												para comparar la tasa de éxito de diferentes tipos de órbitas.
+
+											    - Gráfico de líneas: Fueron útiles para mostrar tendencias de datos a lo largo del tiempo. Se utilizó un gráfico de líneas para mostrar la tasa de éxito a lo largo de varios años.</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-eda-dataviz.ipynb.jupyterliteelviacortez.ipynb" class="button">Ver Jupyter Notebook</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-eda-sql-coursera_sqlliteelviacortez.ipynb" class="image">
+										<img src="images/edasql.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3 id="cinco">Ejecutar consultas SQL para responder preguntas en datos</h3>
+											</header>
+											<p>- Este conjunto de datos incluye un registro de cada carga útil transportada durante una misión SpaceX al espacio exterior.
+											- Se utilizó sqlalchemy y sqllite integrados en python.</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-eda-sql-coursera_sqlliteelviacortez.ipynb" class="button">Ver Jupyter Notebook</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs_launch_site_location.jupyterliteelviacortez.ipynb" class="image">
+										<img src="images/folium.png" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3 id="cincos">Crear un mapa con las ubicaciones de sitios de lanzamiento <br/> 
+												con Folium</h3>
+											</header>
+											<p>Para crear este mapa, se crearon objetos y se agregaron al
+												Mapa en folium. También se utilizaron marcadores para mostrar la ubicación de
+												sitios de lanzamiento, así como lanzamientos exitosos/fallidos para cada uno
+												de los sitios en el mapa. Se hicieron marcas con objetos lineales para
+												calcular distancias entre un sitio de lanzamiento y sus proximidades
+												a la costa, ciudades y carreteras.
+												Al agregar estos objetos, pudimos responder las preguntas
+												siguientes con los patrones geográficos sobre los sitios de lanzamiento:
+												• ¿Están los sitios de lanzamiento muy cerca de las vías del tren? Si
+												• ¿Están los sitios de lanzamiento muy cerca de las autopistas? Si
+												• ¿Están los sitios de lanzamiento muy cerca de la costa? Sí
+											• ¿Los sitios de lanzamiento se mantienen a cierta distancia de las ciudades? Sí</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs_launch_site_location.jupyterliteelviacortez.ipynb" class="button">Ver Jupyter Notebook</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-spacex-visualizationDash-elviacortez.py" class="image">
+										<img src="images/dash.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major"><h3 id="cinco">Crear un panel de control con
+												Plotly Dash</h3>
+
+											</header>
+											<p>El panel contiene dos gráficos:
+												- Un gráfico circular que muestra el lanzamiento exitoso de
+												cada sitio. Este gráfico es útil, ya que puede visualizar la
+												distribución de los resultados del aterrizaje en todos los sitios de lanzamiento o mostrar la tasa de éxito de los lanzamientos en
+												sitios individuales.
+
+												- Un diagrama de dispersión que muestra la relación entre
+												resultados de aterrizaje y masa de carga útil para diferentes
+												impulsores. El panel toma dos entradas, a saber, los sitios
+												y masa de carga útil. Este gráfico es útil porque puedes
+											visualizar cómo las diferentes variables afectan el resultado del aterrizaje.</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-spacex-visualizationDash-elviacortez.py" class="button">Ver Jupyter Notebook</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-spacex-Machine_Learning_Prediction.ipynb" class="image">
+										<img src="images/prediccion.png" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3 id="seis">Análisis predictivo
+												(clasificación)</h3>
+											</header>
+											<p>Se crea un proceso de aprendizaje automático para predecir si la primera etapa aterrizará de acuerdo con los datos de
+												prácticas anteriores, para ello se siguieron estos pasos:
+												1- Cargar los datos como un marco de datos de pandas para explorar los datos y encontrar las etiquetas de entrenamiento, para realizar esta tarea se creó una matriz NumPy a partir de la columna Clase en datos, aplicando el método to_numpy() y luego asignado a la variable.
+												-Estandarizar los datos en X y luego reasignarlos a la variable X usando la transformación.
+												- Utilizar la función train_test_split para dividir los datos X e Y en datos de entrenamiento y prueba. Establecer el parámetro
+												test_size a 0,2 y random_state a 2.
+												2- Para encontrar el método que mejor  convenga:
+												- Crear un objeto GridSearchCV y asignar un conjunto de parámetros.
+											- Cada uno de los objetos fue creado con cv=10 y equipado con los datos de entrenamiento para encontrar el mejor modelo
+										-Los cuatro modelos, regresión logística, SVM, el árbol de decisión y el KNN, tienen la misma puntuación, por lo que todos se desempeñan con una precisión igual al 83,3% y todos son buenos en predecir correctamente los casos positivos, pero vale la pena señalar que el tamaño del ensayo es pequeño, con un tamaño de muestra de solo de 18. Es necesario utilizar más datos para determinar el mejor modelo.</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs-spacex-Machine_Learning_Prediction.ipynb" class="button">Ver Jupyter Notebook</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+
+								<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs_launch_Presentacionfinal-elviacortez.pdf" class="image">
+										<img src="images/conclusion.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Conclusiones</h3>
+											</header>
+											<p>El análisis mostró que existe una correlación positiva entre el número de vuelos y la tasa de éxito, cuanto mayor es el número de vuelos mayor es el éxito y se ha reflejado que el promedio de la
+												tasa de éxito es del 66,6%, ha mejorado con el paso de los años.
+
+												Hay determinadas órbitas como SSO, HEO, GEO y ES-L1 donde los lanzamientos tuvieron más éxito, al ser órbitas geosincrónicas, pueden permanecer en una posición fija y son ideales para
+												operaciones de satélites de comunicaciones, pueden estar más cerca del ecuador.
+
+												La tasa de éxito puede vincularse a la masa de la carga útil, ya que las cargas útiles más ligeras generalmente eran más exitosas que las más pesadas.
+
+												Los sitios de lanzamiento están ubicados estratégicamente cerca de algunas carreteras y vías férreas para el transporte de personal y
+											carga, lejos de las ciudades por razones de seguridad y cerca de la costa en caso de lanzamientos fallidos.
+
+											- SpaceY puede utilizar los modelos para predecir con una precisión relativamente alta si un aterrizaje de etapa 1 tendrá éxito.
+										Si es posible, se deben recopilar más datos para determinar el mejor modelo de aprendizaje automático y mejorar la precisión, porque los datos son insuficientes, y puede suceder que hubo poca variación en las clases, sobreajuste o datos homogéneos.</p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs_launch_Presentacionfinal-elviacortez.pdf" class="button">Ver Pdf</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								
+							</section>
+								
+
+
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>Consideraciones finales</h2>
+									</header>
+									<p>Según los resultados predichos por los modelos de clasificación, existe un 83% de probabilidad de que SpaceX pueda reutilizar la primera etapa de SpaceX y si los lanzamientos logran aterrizar con éxito, se puede predecir que cada lanzamiento costaría
+										62 millones de dólares, aunque todavía cueste un poco más, es una buena idea de negocio para lanzar cohetes para diversas operaciones, especialmente para satélites de comunicaciones, porque según el EDA, la mayor tasa de éxito se produce en las órbitas más cercanas al ecuador, que son geosincrónicos y pueden permanecer en un sitio fijo desde la posición de la Tierra.
+										Teniendo en cuenta que la carga útil en cada lanzamiento debe estar entre 2000 y 4000 Kg para garantizar el éxito y ubicar el sitio de lanzamiento en KSC LC 39A o CCAF SLC 40,
+										que si bien han tenido algunos lanzamientos fallidos a medida que aumentan los vuelos, las condiciones mejorarán, demostrando tener una tasa de éxito promedio del 66%.
+										En términos generales, es bastante factible considerar el lanzamiento de cohetes en los próximos años,
+									siguiendo estas pautas para ofrecerlos a muy buen precio.</p>
+									
+								</div>
+
+								<div class="inner">
+									<header class="major">
+										<h2>Ideas generales</h2>
+									</header>
+									<p>Una de las ideas innovadoras es reutilizar el cohete en cada lanzamiento, así como los aviones con vuelos internacionales, pero además de eso, un cohete que no utilice combustible, sino
+										más bien un componente más accesible y menos perjudicial para el medio ambiente, podría ser agua mezclada con otro componente químico que desarrolle altas velocidades y consuma menos energía.
+										El diseño de los cohetes también es de suma importancia para lograr velocidad y romper la fuerza de resistencia encontrada al salir de la atmósfera, con un estilo casa, pero con una forma aerodinámica que proteja a las personas de los riesgos del exterior.
+										Aunque ya se está estudiando el lanzamiento horizontal de cohetes, también está bien considerar las plataformas de lanzamiento móviles, en lugar de estar fijas en el suelo,
+										Sería como construir una pala excavadora gigante, de las que se utilizan en la construcción, con una base redonda o alargada para colocar el cohete y mantenerlo en la mejor posición para el lanzamiento, y lo mejor es que sería móvil y se podría conducir a cualquier lugar con la base giratoria, para la mejor ubicación y posición.
+									Para iniciar este proyecto de una manera más comercial, sería más conveniente comenzar con lanzamientos a las órbitas más cercanas a la Tierra, que según el éxito es mucho mayor y con poca carga, para familiarizarse con este tipo de vuelos.</p>
+									<ul class="actions">
+										<li><a href="index.html" class="button next">Inicio</a></li>
+									</ul>
+								</div>
+
+							</section>
+
+							<section id="two" class="spotlights">
+							<section>
+									<a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs_launch_Presentacionfinal-elviacortez.pdf" class="image">
+										<img src="images/capstone.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Certificado</h3>
+											</header>
+											<p>Qué aprendí:<br>
+												-Competencia en técnicas de ciencia de datos y aprendizaje automático utilizando un conjunto de datos del mundo real y preparar un informe para las partes interesadas.<br>  
+
+												-Aplicar mis habilidades para realizar la recopilación de datos, el manejo de datos, el análisis exploratorio de datos, el desarrollo de modelos de visualización de datos y la evaluación de modelos.<br>
+
+											    -Escribir código Python para crear modelos de aprendizaje automático, incluidas máquinas de vectores de soporte, clasificadores de árboles de decisión y vecinos más cercanos a k.
+											    <br>
+
+											    -Evaluar los resultados de los modelos de aprendizaje automático para el análisis predictivo, comparar sus puntos fuertes y débiles e identificar el modelo óptimo. <br> 
+											    Link de información: https://www.coursera.org/learn/applied-data-science-capstone?specialization=ibm-data-science
+											    </p>
+											<ul class="actions">
+												<li><a href="https://github.com/elviacortez/ciencia-de-datos/blob/main/jupyter-labs_launch_Presentacionfinal-elviacortez.pdf" class="button">Ver Información</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</section>
+
+					</div>
+
+
+					
+
+				</div>
+
+
+
+
+				<!-- Contact -->
+					
+					<section id="contact">
+						<div class="">
+								<section>
+									<section>
+										<div class="contact-method">
+											<span class="icon alt fa-envelope"></span>
+											<h3>Email</h3>
+											<a href="#">elviacp837@gmail.com</a>
+										</div>
+									</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon alt fa-home"></span>
+										<h3>Dirección</h3>
+										<span>Barquisimeto - Edo. Lara<br />
+										Venezuela</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
