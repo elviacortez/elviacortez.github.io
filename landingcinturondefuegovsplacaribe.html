@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<!--
+    Forty by HTML5 UP | Adaptado para Portafolio de Ciencia de Datos
+-->
+<html>
+    <head>
+        <title>Proyectos de Datos | Elvia Cortéz</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .map-container {
+                width: 100%;
+                height: 650px;
+                border: 1px solid #ffffff22;
+                border-radius: 6px;
+                margin-top: 1.5em;
+                margin-bottom: 2em;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Elvia Cortéz</strong> <span>Portafolio de Datos</span></a>
+                    <nav>
+                        <a href="#menu">Menu</a>
+                    </nav>
+                </header>
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <ul class="links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="proyectosdedatos.html">Proyectos de Datos</a></li>
+                        <li><a href="landingproyecto.html">Proyecto de Ciencia de datos aplicada</a></li>
+                        <li><a href="landingtools.html">Herramientas para la Ciencia de datos</a></li>
+                        <li><a href="landingproypython.html">Python para Ciencia de Datos</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Main Section -->
+                <div id="main" class="alt">
+
+                    <!-- One -->
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h2>Análisis Geofísico: Cinturón de Fuego vs. Placa del Caribe</h2>
+                            </header>
+                            <p>Datos de los últimos 30 días de la REST API (USGS GeoJSON).</p>
+
+                            <hr class="major" />
+
+                            <!-- CASO PRÁCTICO 1: SISMOLOGÍA -->
+                            <article>
+                                
+                                <p><strong>Stack:</strong> Python (Pandas, NumPy) | Plotly Express | REST API (USGS GeoJSON)</p>
+                                
+                                <p>
+                                    Diagnóstico estadístico y geoespacial que evalúa la distribución de eventos sísmicos en la interacción de placas tectónicas. El análisis reveló que mientras el Pacífico muestra subducción profunda (183.5 km), la Placa del Caribe presenta una <strong>mediana de profundidad de 18.3 km</strong>, confirmando la predominancia de fallas de rumbo corticales superficiales (Boconó y San Sebastián).
+                                </p>
+
+                                 <!-- Gráfico / Mapa Incrustado Directamente -->
+                                <h3>Mapamundi Interactivo en Tiempo Real</h3>
+                                <iframe src="mapa_sismos_caribe_pacifico.html" class="map-container" frameborder="0"></iframe>
+
+                                <ul class="actions">
+                                    
+                                    <li><a href="mapa_sismos_caribe_pacifico.html" class="button icon fa-map" target="_blank">Pantalla Completa</a></li>
+                                </ul>
+
+
+                               <!-- CASO PRÁCTICO 1: SISMOLOGÍA -->
+
+                                <header class="major">
+                                    <h2>🇻🇪 Contexto Tectónico y Marco Sísmico de Venezuela</h2>
+                                </header>
+                                <p>Venezuela se encuentra ubicada en una zona de alta complejidad geodinámica, justo en el límite de interacción entre la Placa del Caribe y la Placa Sudamericana.
+
+                                    A diferencia de la costa pacífica de Centroamérica (donde domina la subducción de la Placa de Cocos), el sistema venezolano está regido principalmente por un sistema de fallas de rumbo / desplazamiento lateral derecho (transcurrent/strike-slip faults) que absorbe el movimiento relativo de aproximadamente ñ entre ambas placas. PLACA DEL CARIBE ───────► (Movimiento hacia el Este) PLACA SUDAMERICANA ◄─────── (Movimiento hacia el Oeste)
+                                    <img src="placas.jpg" alt="Placas tectónicas">
+
+                                    <h3>Principales Sistemas de Fallas Activas en Venezuela:</h3>
+
+
+                                    <ol class="actions">
+                                        <li>Falla de Boconó (Región Andina y Centro-Occidente):
+                                        Atraviesa los estados Táchira, Mérida, Trujillo, Lara y Yaracuy. Es la estructura tectónica más activa del país y responsable de importantes eventos históricos.</li>
+                                        <li>Falla de San Sebastián (Región Central y Costera):
+                                        Discurre paralela a la línea de costa (Carabobo, Aragua, La Guaira, Distrito Capital y Miranda). Es el límite directo entre la corteza continental y la cuenca marina del Caribe.</li>
+                                        <li>Falla de El Pilar (Región Oriental):
+                                        Secta los estados Sucre y Monagas hasta el Golfo de Paria y Trinidad. Es una zona de constante liberación de energía por fricción lateral (e.g., Terremoto de Cariaco de 1997 y Yaguaraparo de 2018).</li>
+                                        <li>Falla de Oca-Ancón (Región Occidental):
+                                        Corta el estado Zulia y Falcón en sentido este-oeste.</li>
+                                        
+                                    </ol>
+
+                                   
+                                </p>
+                                <img src="fallasvenezuela.png" alt="Fallas geológicas de Venezuela">
+
+
+                                
+
+                                <hr class="major" />
+
+                                
+                                <article>
+
+                                    
+                                    <h3>
+                                        Conclusiones y Valor Analítico del Proyecto<h3>
+
+                                        <p>El análisis exploratorio de datos sísmicos (vía API del USGS) permitió contrastar la dinámica geofísica entre la cuenca del Pacífico y el Caribe, así como evaluar en detalle la sismicidad regional de Venezuela.</p>
+                                        
+                                    </h3>
+
+
+                                    <ol class="actions">
+                                        <li><strong>Divergencia Estructural: Pacífico vs. Caribe</strong>
+
+                                          <ul>
+                                              <li><strong>Cinturón de Fuego del Pacífico</strong>: Exhibe una mediana de profundidad de 33.0 Km. y máximos de hasta 183.5 Km. Esto respalda estadísticamente el modelo de subducción de la Placa de Cocos penetrando bajo la litosfera continental.</li>
+                                              <li><strong>Sistema Caribe - Sudamérica:</strong> Registra una mediana de profundidad de 18.3 Km. Este comportamiento eminentemente superficial confirma un sistema dominado por fallas de rumbo / transcurrentes en la corteza superior.</li>
+                                          </ul>
+                                      </li>
+
+
+
+
+                                      </li>
+                                      <li><strong>🇻🇪 Diagnóstico del Evento de Junio de 2026 en Venezuela</strong>
+
+                                         <ul>
+                                              <li><strong>Alineación Tectónica:</strong> La cartografía geoespacial evidencia la concentración de sismos en el eje centro-norte (Lara, Yaracuy, Carabobo, Aragua y La Guaira), coincidiendo de forma exacta con la traza de los sistemas de fallas activos de Boconó y San Sebastián.</li>
+                                              <li> <strong>Fenómeno de Doblete Sísmico:</strong> La ocurrencia consecutiva de eventos con magnitud >= 7.0 a baja profundidad <= 20 Km. demostró el mecanismo de transferencia de estrés elástico instantáneo a lo largo del límite de placas Caribe-Sudamérica.</li>
+                                          </ul>
+
+                                        
+                                       </li>
+                                        <li><strong>Síntesis de Riesgo y Recurrencia</strong>
+
+                                        Apoyados en la Ley de Gutenberg-Richter, confirmamos que la masa principal de registros diarios corresponde a micro-sismicidad (M <= 4.0). Los eventos de alta magnitud (M>= 7.0) poseen períodos de retorno de varias décadas o siglos, pero su condición superficial en zonas urbanas densamente pobladas representa el mayor factor de exposición y riesgo socio-estructural.</li>
+                                        
+                                        
+                                    </ol>
+
+                                    <!-- Gráfico / Mapa Incrustado Directamente -->
+                                    <h3>🇻🇪 Mapamundi Interactivo en Tiempo Real</h3>
+                                    <iframe src="mapa_sismos_venezuela_junio2026.html" class="map-container" frameborder="0"></iframe>
+
+                                    <ul class="actions">
+                                        <li><a href="sismos.ipynb" class="button special icon fa-github" target="_blank">Ver Código en GitHub</a></li>
+                                        <li><a href="mapa_sismos_venezuela_junio2026.html" class="button icon fa-map" target="_blank">Pantalla Completa</a></li>
+                                    </ul>
+
+
+                   
+                            </article>
+
+
+
+
+                            <!-- CASO PRÁCTICO 2: PANAMÁ -->
+                            <article style="margin-top: 3em;">
+                                <h2>🇵🇦 Complejidad Tectónica  y Análisis de profundidad en la Microplaca de Panamá</h2>
+                                <p><strong>Stack:</strong> Python (Pandas, Requests) | Plotly Express | USGS REST API GeoJSON</p>
+
+                                <p>
+                                    Análisis geoespacial del bloque tectónico panameño, delimitado por el Cinturón Deformado del Norte de Panamá (Caribe) y la Zona de Fractura de Panamá (Pacífico). La evaluación de datos sísmicos confirma una mediana de profundidad cortical muy superficial ($< 15\text{ km}$), evidenciando el comportamiento estructural del istmo frente a la compresión de las placas vecinas.
+                                </p>
+
+                                <ul class="actions">
+                                    <li><a href="mapa_sismos_panamaprofundidad.html" class="button special icon fa-map" target="_blank">🗺️ Abrir Mapa Interactivo (Panamá)</a></li>
+                                </ul>
+
+                                <!-- Mapa Incrustado -->
+                                <iframe src="mapa_sismos_panamaprofundidad.html" class="map-container" frameborder="0"></iframe>
+                            </article>
+
+
+
+                            
+
+                            <!-- CASO PRÁCTICO 2: PANAMÁ -->
+                            <article style="margin-top: 3em;">
+                                <h2>🇵🇦 Complejidad Tectónica y Análisis de Magnitud en Panamá</h2>
+                                <p><strong>Stack:</strong> Python (Pandas, Requests) | Plotly Express | USGS REST API GeoJSON</p>
+
+                                <p>
+                                    Análisis geoespacial del bloque tectónico panameño. En esta visualización, la <strong>escala cromática de la leyenda (barra continua) representa la magnitud del evento ($M_w$)</strong>, variando desde magnitudes moderadas (amarillo) hasta los eventos de mayor energía (rojo intenso). Este mapeo térmico permite identificar rápidamente los focos de mayor concentración de energía en el límite de la Microplaca de Panamá.
+                                </p>
+
+                                <ul class="actions">
+                                    <li><a href="mapa_sismos_panamaprofundidad.html" class="button special icon fa-map" target="_blank">🗺️ Abrir Mapa de Magnitudes (Panamá)</a></li>
+                                    <li><a href="mapa_sismos_mayores.html" class="button icon fa-warning" target="_blank">⚠️ Ver Eventos Críticos (M >= 6.0)</a></li>
+                                </ul>
+
+                                <!-- Mapa Incrustado -->
+                                <iframe src="mapa_sismos_panamamagnitud.html" class="map-container" frameborder="0"></iframe>
+                            </article>
+
+
+
+
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <div class="inner">
+                        <ul class="icons">
+                            <li><a href="https://www.instagram.com/datavizjourney.ve/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="https://elviacortez.github.io/" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/elvia-cortez/" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                        <ul class="copyright">
+                            <li>&copy; Elvia Cortéz</li>
+                        </ul>
+                    </div>
+                </footer>
+
+            </div>
+
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
